@@ -3,7 +3,7 @@ import { compassPoint, distanceToKaaba, qiblaBearing } from "@/lib/qibla";
 
 describe("qibla", () => {
   it("Addis Ababa faces roughly north-north-east", () => {
-    expect(qiblaBearing(9.03, 38.74)).toBeCloseTo(4, 0);
+    expect(qiblaBearing(9.03, 38.74)).toBeCloseTo(4.7, 1);
   });
   it("London faces about 119° (south-east)", () => {
     expect(qiblaBearing(51.51, -0.13)).toBeCloseTo(119, 0);
