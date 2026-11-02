@@ -17,6 +17,7 @@ import { Route as IconsRouteImport } from './routes/icons'
 import { Route as LecturesRouteImport } from './routes/lectures'
 import { Route as MoreRouteImport } from './routes/more'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as QiblaRouteImport } from './routes/qibla'
 import { Route as QuranRouteImport } from './routes/quran'
 import { Route as RamadanRouteImport } from './routes/ramadan'
 import { Route as SettingsRouteImport } from './routes/settings'
@@ -71,6 +72,11 @@ const MoreRoute = MoreRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QiblaRoute = QiblaRouteImport.update({
+  id: '/qibla',
+  path: '/qibla',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuranRoute = QuranRouteImport.update({
@@ -158,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/lectures': typeof LecturesRoute
   '/more': typeof MoreRoute
   '/privacy': typeof PrivacyRoute
+  '/qibla': typeof QiblaRoute
   '/quran': typeof QuranRoute
   '/ramadan': typeof RamadanRoute
   '/settings': typeof SettingsRoute
@@ -183,6 +190,7 @@ export interface FileRoutesByTo {
   '/lectures': typeof LecturesRoute
   '/more': typeof MoreRoute
   '/privacy': typeof PrivacyRoute
+  '/qibla': typeof QiblaRoute
   '/quran': typeof QuranRoute
   '/ramadan': typeof RamadanRoute
   '/settings': typeof SettingsRoute
@@ -209,6 +217,7 @@ export interface FileRoutesById {
   '/lectures': typeof LecturesRoute
   '/more': typeof MoreRoute
   '/privacy': typeof PrivacyRoute
+  '/qibla': typeof QiblaRoute
   '/quran': typeof QuranRoute
   '/ramadan': typeof RamadanRoute
   '/settings': typeof SettingsRoute
@@ -236,6 +245,7 @@ export interface FileRouteTypes {
     | '/lectures'
     | '/more'
     | '/privacy'
+    | '/qibla'
     | '/quran'
     | '/ramadan'
     | '/settings'
@@ -261,6 +271,7 @@ export interface FileRouteTypes {
     | '/lectures'
     | '/more'
     | '/privacy'
+    | '/qibla'
     | '/quran'
     | '/ramadan'
     | '/settings'
@@ -286,6 +297,7 @@ export interface FileRouteTypes {
     | '/lectures'
     | '/more'
     | '/privacy'
+    | '/qibla'
     | '/quran'
     | '/ramadan'
     | '/settings'
@@ -312,6 +324,7 @@ export interface RootRouteChildren {
   LecturesRoute: typeof LecturesRoute
   MoreRoute: typeof MoreRoute
   PrivacyRoute: typeof PrivacyRoute
+  QiblaRoute: typeof QiblaRoute
   QuranRoute: typeof QuranRoute
   RamadanRoute: typeof RamadanRoute
   SettingsRoute: typeof SettingsRoute
@@ -385,6 +398,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qibla': {
+      id: '/qibla'
+      path: '/qibla'
+      fullPath: '/qibla'
+      preLoaderRoute: typeof QiblaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quran': {
@@ -504,6 +524,7 @@ const rootRouteChildren: RootRouteChildren = {
   LecturesRoute: LecturesRoute,
   MoreRoute: MoreRoute,
   PrivacyRoute: PrivacyRoute,
+  QiblaRoute: QiblaRoute,
   QuranRoute: QuranRoute,
   RamadanRoute: RamadanRoute,
   SettingsRoute: SettingsRoute,
