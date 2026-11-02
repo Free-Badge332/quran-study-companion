@@ -63,7 +63,7 @@
 # Professional Android audit (brief 3)
 - [x] Remove "Quran stored on this device" label; offline notice + storage errors kept; phone build offline-tested.
 - [ ] Lectures/Community: waiting on approved trusted sources.
-- [ ] Qibla screen: not built yet (needs your go-ahead).
+- [x] Qibla screen: offline compass from saved city (More → Qibla); live heading needs a phone sensor.
 - [ ] APK build + device tests: need Android Studio and a phone.
 # Play Store brief (5 phases, approval after each)
 - [x] Phase 1 audit: blockers reported.
