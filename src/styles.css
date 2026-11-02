@@ -252,3 +252,10 @@ html.native body { padding-inline: 0; }
 /* Docked audio player sits above the phone tab bar. */
 .player-dock { bottom: calc(var(--bottom-nav-height) + var(--safe-bottom)); }
 @media (min-width: 768px) { .player-dock { bottom: 0; } }
+
+/* Subtle eight-point star lattice used on feature cards (Ethiopian/Islamic geometric motif). */
+@utility bg-islamic-pattern {
+  background-image:
+    radial-gradient(circle at 100% 0%, color-mix(in oklab, var(--gold) 35%, transparent), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='white' stroke-opacity='0.09' stroke-width='1'%3E%3Cpath d='M24 4l6 14 14 6-14 6-6 14-6-14-14-6 14-6z'/%3E%3Crect x='12' y='12' width='24' height='24' transform='rotate(45 24 24)'/%3E%3C/g%3E%3C/svg%3E");
+}
