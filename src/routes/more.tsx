@@ -42,7 +42,7 @@ function MorePage() {
       <PageTitle title={t("moreTitle")} />
       <Link to="/reciters" className="mb-2 flex min-h-11 items-center gap-4 border-y border-border py-4 text-primary"><Mic2 size={20} /><span className="flex-1 font-medium">Reciters</span><ChevronRight size={18} /></Link>
       <Link to="/downloads" className="mb-2 flex min-h-11 items-center gap-4 border-y border-border py-4 text-primary"><Download size={20} /><span className="flex-1 font-medium">Downloads</span><ChevronRight size={18} /></Link>
-      <Link to="/qibla" className="mb-6 flex min-h-11 items-center gap-4 border-y border-border py-4 text-primary"><QiblaIcon size={20} /><span className="flex-1 font-medium">Qibla</span><ChevronRight size={18} /></Link>
+      <Link to="/qibla" className="mb-6 flex min-h-11 items-center gap-4 border-y border-border py-4 text-primary"><QiblaIcon size={20} /><span className="flex-1 font-medium">{t("navQibla")}</span><ChevronRight size={18} /></Link>
       <div className="space-y-6">
         {GROUPS.map((g) => (
           <section key={g.title}>
